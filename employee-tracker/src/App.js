@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import './components/employeedirectory'
+import './containers/employeedirectory'
 import NavBar from "./components/all/NavBar";
-import EmployeeDirectory from './components/employeedirectory';
+import EmployeeDirectory from './containers/employeedirectory';
 import landing from './containers/landing'
 
 function App() {
