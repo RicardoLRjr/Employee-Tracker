@@ -1,14 +1,14 @@
 import React from 'react';
 import Employee from './Employee'
 
-const EmployeeList = () => {
+const EmployeeList = (props) => {
     return (
         <div className="container">
         <div className="row">
-        <h1>There are {props.results.length} employees</h1>
+        <h1>There are {props.employees.length} employees</h1>
     </div>  
     <div className="row">
-    {props.results.map((employee) => (
+    {props.employees.map((employee) => (
               <Employee {...employee} key={employee.id}/>
             ))}
     </div>
