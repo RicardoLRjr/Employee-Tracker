@@ -3,15 +3,19 @@ import EmployeeList from "../components/Employees/EmployeeList"
 import axios from "axios"
 class EmployeeDirectory extends Component {
 state = {
-    employees:[{name: "test"},
-    {age: "test age"},
-{email: "test email"}] 
+    employees:[] 
 }
 
-// componentDidMount() {
-//     this.getEmployees();
-//   }
-
+componentDidMount() {
+    axios
+    .get("https://randomuser.me/api/?results=50")
+.then(response => {
+    console.log(response.data.results)
+}).catch(err => {
+    if(err){
+        console.log(err)
+    }})
+}
 
 //   getEmployees = () => {
 //     axios
@@ -30,7 +34,7 @@ state = {
 
     render() {
         return (
-            <div class="col">
+            <div className="col">
                 <p>
                     Check your employees below!
                 </p>
@@ -54,8 +58,7 @@ state = {
 //     <td>@mdo</td>
 //   </tr>
 // </tbody>
-// </table>                                */}
-
+// </table> */}
         </div>);
     }
 }
