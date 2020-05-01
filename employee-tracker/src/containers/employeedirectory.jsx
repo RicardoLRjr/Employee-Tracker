@@ -11,6 +11,7 @@ componentDidMount() {
     .get("https://randomuser.me/api/?results=50")
 .then(response => {
     console.log(response.data.results)
+    this.setState({employees: response.data.results})
 }).catch(err => {
     if(err){
         console.log(err)
@@ -35,30 +36,7 @@ componentDidMount() {
     render() {
         return (
             <div className="col">
-                <p>
-                    Check your employees below!
-                </p>
                 <EmployeeList employees={this.state.employees}/>
-
-{/* // <table class="table">
-// <thead>
-//   <tr>
-//     <th scope="col">Id#</th>
-//     <th scope="col">Name</th>
-//     <th scope="col">Email</th>
-//     <th scope="col">Age</th>
-//     <th scope="col">Picture</th>
-//   </tr>
-// </thead>
-// <tbody>
-//   <tr>
-//     <th scope="row">1</th>
-//     <td>Mark</td>
-//     <td>Otto</td>
-//     <td>@mdo</td>
-//   </tr>
-// </tbody>
-// </table> */}
         </div>);
     }
 }
