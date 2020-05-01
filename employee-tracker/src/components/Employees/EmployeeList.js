@@ -8,10 +8,10 @@ const EmployeeList = (props) => {
         <h1>There are {props.employees.length} employees</h1>
     </div>  
     <div className="row">
-    <table class="table table-dark">
+    <table className="table table-dark">
   <thead>
     <tr>
-      <th scope="col">ID#</th>
+      <th scope="col">ID</th>
       <th scope="col">First</th>
       <th scope="col">Last</th>
       <th scope="col">Email</th>
@@ -20,7 +20,8 @@ const EmployeeList = (props) => {
   </thead>
   <tbody>
     {props.employees.map((employees) => (
-              <Employee {...employees} 
+              <Employee {...employees}
+              key ={employees.email} 
               id={employees.id.name}
               Fname={employees.name.first}
               Lname={employees.name.last}

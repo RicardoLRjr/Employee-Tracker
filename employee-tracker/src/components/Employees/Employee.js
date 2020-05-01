@@ -9,10 +9,6 @@ const Employee = (props) => {
       <td>{props.Lname}</td>
       <td>{props.email}</td>
       <td>{props.age}</td>
-            {/* <img src = {props.picture.medium}
-                alt = "Picture of employee"
-                style = "style placeholder"
-                ></img> */}
     </tr>
     );
 };

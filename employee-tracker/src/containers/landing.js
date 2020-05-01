@@ -3,17 +3,8 @@ import EmployeeDirectory from './employeedirectory'
 
 const landing = () => {
     return (
-        <div className="container">
-            <div className="row">
-                <div className="col">
-                    <h1 className="header">Welcome to the Employee Tracker!</h1>
-                <div className="row">
-                    <div className="col"> 
+        <div>
         <EmployeeDirectory/>
-        </div>
-        </div>
-                </div>
-            </div>
         </div>
     );
 };
