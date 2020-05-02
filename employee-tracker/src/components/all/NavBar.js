@@ -2,14 +2,9 @@ import React from "react";
 
 const NavBar = () => {
   return (
-    <nav className="nav">
-      <a className="nav-link active" href="/">
-        Employee Tracker
-      </a>
-      <a className="nav-link" href="/directory">
-        Directory
-      </a>
-    </nav>
+    <nav class="navbar navbar-dark bg-dark">
+    <span class="navbar-brand mb-0 h1">Employee Tracker</span>
+  </nav>
   );
 };
 

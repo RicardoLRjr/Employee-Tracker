@@ -4,9 +4,6 @@ import Employee from './Employee'
 const EmployeeList = (props) => {
     return (
         <div className="container">
-        <div className="row">
-        <h1>There are {props.employees.length} employees</h1>
-    </div>  
     <div className="row">
     <table className="table table-dark">
   <thead>

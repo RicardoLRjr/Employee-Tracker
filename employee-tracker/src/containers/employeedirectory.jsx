@@ -12,7 +12,6 @@ componentDidMount() {
     axios
     .get("https://randomuser.me/api/?results=30")
 .then(response => {
-    console.log(response.data.results)
     this.setState({employees: response.data.results,
     employeesToShow: response.data.results})
 }).catch(err => {
@@ -34,6 +33,19 @@ handleChange = (event) => {
     });
 };
 
+// TO-DO
+// fix issues that break site when using sort function
+
+// handleSort = (event) => {
+// event.preventDefault();
+// const employees = [this.state.employees]
+// const sortedEmployees = employees
+// console.log(sortedEmployees)  
+// this.setState({
+//     employeesToShow: sortedEmployees
+// })
+// }
+
 handleSubmit = (event) => {
     event.preventDefault();
     const employees = [...this.state.employees];
@@ -47,14 +59,14 @@ handleSubmit = (event) => {
 }
     render() {
         return (  <div>
-        <h1 className="header">Welcome to the Employee Tracker!</h1>
+       
             <div className="container">
-        
+         <h1 className="header" id="welcome">Welcome to the Employee Tracker!</h1>
             <div className="row">
                 <div className="col">
                 <form onSubmit={this.handleSubmit}>
                 <div className="row">
-                  <div className="col-sm-10">
+                  <div className="col-sm-8">
                     <div className="form-group">
                       <input
                         type="text"
@@ -69,8 +81,14 @@ handleSubmit = (event) => {
                   <div className="col-sm-2">
                     <button type="submit" className="btn btn-primary">
                       Submit
-                    </button>
+                    </button> 
                   </div>
+                  <div className="col-sm-2">
+                      <button className="btn btn-danger"
+                onClick={this.handleSort}>
+                    Sort Names
+                </button>
+                </div>
                 </div>
               </form>
               {this.state.employees.length !==
@@ -81,7 +99,9 @@ handleSubmit = (event) => {
                 >
                   Clear Filter
                 </button>
-              )}
+              )}  <div>
+               
+                </div>
                 <EmployeeList employees={this.state.employeesToShow}/>
                 </div>
             </div>
