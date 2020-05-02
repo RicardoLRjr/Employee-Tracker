@@ -38,8 +38,9 @@ Known Issues:
 Directions for Further Development: 
     In the future, I would like to add a page/functionality for a user to send in their own JSON of data so that this utility can be used to directly manage their company's employees.
 Screenshots:
-    
-
+employee-tracker\instructions\Screenshot1.png
+employee-tracker\instructions\Screenshot2.png
+employee-tracker\instructions\Screenshot3.png
  Badge:
  https://img.shields.io/badge/Current-Maintained-Green.svg)(https://shields.io/) 
 
